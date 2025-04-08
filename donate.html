@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Our Cause - Donate to Help Sickle Cell Patients">
+    <meta name="author" content="Your NGO Name">
+    <title>Donate - SCASN</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+
+ <header> 
+  <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Sickle_1.JPG" alt="Sickle Cell Awareness Logo" class="img-fluid">
+      </a>
+
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icofont-navigation-menu"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarmain">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary mx-1" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary mx-1" href="about.html">Who We Are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary mx-1" href="services.html">What We Do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary mx-1" href="donate.html">Donate</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="page-title donation-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">Support Our Cause</span>
+          <h1 class="text-capitalize mb-4 text-lg">Make A Donation</h1>
+          <div class="divider mx-auto mb-4"></div>
+          <p class="hero-text">Your generosity helps us create a future where Sickle Cell Disease no longer limits potential</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="donation-impact">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Your Impact</h2>
+      <div class="divider mx-auto my-4"></div>
+      <p class="subtitle">Every contribution makes a meaningful difference in our community</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card">
+          <div class="impact-icon">
+            <i class="icofont-water-bottle"></i>
+          </div>
+          <div class="impact-content">
+            <h4>Essential Support</h4>
+            <p>Provides water bottles and jackets for warriors, ensuring more individuals know their sickle cell status</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card">
+          <div class="impact-icon">
+            <i class="icofont-heart-beat"></i>
+          </div>
+          <div class="impact-content">
+            <h4>Family Care</h4>
+            <p>Supports mothers in managing daily challenges of caring for children with sickle cell disease</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card">
+          <div class="impact-icon">
+            <i class="icofont-medical-sign"></i>
+          </div>
+          <div class="impact-content">
+            <h4>Medical Support</h4>
+            <p>Enables treatment and management support for affected children in our community</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card">
+          <div class="impact-icon">
+            <i class="icofont-education"></i>
+          </div>
+          <div class="impact-content">
+            <h4>Awareness</h4>
+            <p>Helps us reach more young couples with accurate information about sickle cell disease</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-form-wrap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center">
+                    <h2>Donate Now</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p style="color: #0000FF;">Your support helps us in the fight against Sickle Cell Disease.<br>Please choose the type of donation you would like to make.</p>
+                </div>
+                <div class="contact__form">
+                    <form id="donation-form" method="post" action="donate.php">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="donation_type" class="form-control" required>
+                                <option value="" disabled selected>Select Donation Type</option>
+                                <option value="money">Monetary Donation</option>
+                                <option value="equipment">Physical Equipment Donation</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="monetary-donation" style="display: none;">
+                            <input type="number" name="amount" class="form-control" placeholder="Donation Amount (in USD)">
+                        </div>
+                        <div class="form-group" id="physical-donation" style="display: none;">
+                            <textarea name="equipment_details" class="form-control" rows="4" placeholder="Details of Equipment"></textarea>
+                            <input type="text" name="pickup_location" class="form-control mt-3" placeholder="Pickup Location">
+                        </div>
+                        <button type="button" class="btn popup-button" style="background-color: #007bff; color: white;" onclick="showPopup()">Donate Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="payment-info">
+                    <h4>Payment Information</h4>
+                    <p>For monetary donations, please use the following mobile money options:</p>
+                    <ul>
+                        <li>MTN Mobile Money: +256 700 123 456</li>
+                        <li>Airtel Money: +256 750 987 654</li>
+                    </ul>
+                    <h4 class="mt-4">For any inquiries</h4>
+                    <p>For inquiries or assistance, please reach out to us at:</p>
+                    <ul>
+                        <li>Email: director.scsaan@gmail.com</li>
+                        <li>MTN Mobile Money: +256 782 083 178 / 777 693 879</li>
+                        <li>Airtel Money: +256 709 753 725</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <div class="text-center mb-4">
+            <i class="icofont-info-circle" style="font-size: 3rem; color: #223a66;"></i>
+            <h2 class="mt-3">Online Donations Coming Soon</h2>
+            <div class="divider mx-auto my-4"></div>
+        </div>
+        <p class="text-center mb-4">Thank you for your interest in supporting our cause. While our online donation system is being finalized, you can still make a difference through the following methods:</p>
+        
+        <div class="donation-methods">
+            <div class="method-group mb-4">
+                <h4 class="text-primary"><i class="icofont-mobile-phone mr-2"></i>Mobile Money</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><strong>MTN Mobile Money:</strong> +256 782 083 178 / 777 693 879</li>
+                    <li class="mb-2"><strong>Airtel Money:</strong> +256 709 753 725</li>
+                </ul>
+            </div>
+            
+            <div class="method-group mb-4">
+                <h4 class="text-primary"><i class="icofont-box mr-2"></i>Physical Donations</h4>
+                <p>For equipment or physical donations, please contact us at:</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="icofont-envelope mr-2"></i>director.scsaan@gmail.com</li>
+                    <li class="mb-2"><i class="icofont-phone mr-2"></i>+256 782 083 178</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <button class="btn btn-primary mr-2" onclick="closePopup()">Close</button>
+            <a href="about.html" class="btn btn-outline-primary">Learn More About Our Work</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: auto;
+}
+
+.donation-methods {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.method-group {
+    margin-bottom: 12px;
+}
+
+.method-group:last-child {
+    margin-bottom: 0;
+}
+
+.method-group h4 {
+    color: #223a66;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.method-group ul {
+    margin: 0;
+    padding: 0;
+}
+
+.method-group ul li {
+    color: #6F8BA4;
+    font-size: 0.9rem;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text-center.mb-4 {
+    margin-bottom: 12px !important;
+}
+
+.text-center.mb-4 i {
+    font-size: 2rem;
+    color: #223a66;
+}
+
+.text-center.mb-4 h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #223a66;
+}
+
+.text-center p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6F8BA4;
+    margin-bottom: 12px;
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background: #e12454;
+    margin: 10px auto;
+}
+
+.text-center.mt-4 {
+    margin-top: 15px !important;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .popup-content {
+        padding: 20px;
+        width: 92%;
+        margin: auto;
+    }
+    
+    .donation-methods {
+        padding: 12px;
+    }
+    
+    .text-center.mb-4 h2 {
+        font-size: 1.3rem;
+    }
+    
+    .method-group h4 {
+        font-size: 0.95rem;
+    }
+    
+    .method-group ul li {
+        font-size: 0.85rem;
+    }
+}
+</style>
+
+<script>
+    // Function to show the popup
+    function showPopup() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+<!-- Modal -->
+<div id="messageModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Donation Status</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <p id="modalMessage"></p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<footer class="footer section gray-bg">
+    <div class="container text-center">
+        <p>&copy; 2024 SCASN. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="plugins/jquery/jquery.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    // Show the appropriate donation type fields based on selection
+    document.querySelector('select[name="donation_type"]').addEventListener('change', function () {
+        document.getElementById('monetary-donation').style.display = this.value === 'money' ? 'block' : 'none';
+        document.getElementById('physical-donation').style.display = this.value === 'equipment' ? 'block' : 'none';
+    });
+
+    // Check for success or error messages in URL
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('success')) {
+        document.getElementById('modalMessage').textContent = 'Thank you for your donation! A confirmation email has been sent.';
+        $('#messageModal').modal('show');
+    } else if (params.has('error')) {
+        document.getElementById('modalMessage').textContent = `Error: ${params.get('error')}`;
+        $('#messageModal').modal('show');
+    }
+</script>
+</body>
+</html>
