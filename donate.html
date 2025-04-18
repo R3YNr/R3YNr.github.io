@@ -14,6 +14,324 @@
     <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    /* Mobile-First Responsive Styles */
+    @media (max-width: 768px) {
+      /* General Typography */
+      body {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+      }
+
+      /* Header & Navigation */
+      .navbar-brand span {
+        font-size: 1rem !important;
+      }
+
+      .navbar {
+        padding: 10px 0 !important;
+      }
+
+      /* Donation Hero Section */
+      .donation-hero {
+        padding: 100px 0 60px !important;
+        background: linear-gradient(rgba(34, 58, 102, 0.9), rgba(225, 36, 84, 0.85)), url('images/bg/banner.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+
+      .donation-hero::before {
+        content: '' !important;
+        position: absolute !important;
+        top: -50% !important;
+        left: -50% !important;
+        width: 200% !important;
+        height: 200% !important;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%) !important;
+        animation: rotate 30s linear infinite !important;
+        z-index: 1 !important;
+      }
+
+      .donation-hero .block {
+        position: relative !important;
+        z-index: 2 !important;
+        animation: fadeIn 1s ease-out !important;
+      }
+
+      .hero-text {
+        font-size: 1.1rem !important;
+        color: rgba(255,255,255,0.9) !important;
+        max-width: 600px !important;
+        margin: 0 auto !important;
+        animation: fadeInUp 1s ease-out 0.5s !important;
+        animation-fill-mode: both !important;
+      }
+
+      /* Impact Section */
+      .donation-impact {
+        padding: 40px 0 !important;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+      }
+
+      .impact-card {
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 25px !important;
+        margin-bottom: 20px !important;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+        border: 1px solid rgba(225, 36, 84, 0.1) !important;
+        transition: all 0.3s ease !important;
+        animation: slideUp 0.5s ease-out !important;
+      }
+
+      .impact-card:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      .impact-icon {
+        background: linear-gradient(135deg, rgba(225, 36, 84, 0.1), rgba(34, 58, 102, 0.1)) !important;
+        width: 70px !important;
+        height: 70px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 20px !important;
+        transition: all 0.3s ease !important;
+      }
+
+      .impact-icon i {
+        font-size: 2rem !important;
+        color: var(--primary-color) !important;
+      }
+
+      .impact-card:hover .impact-icon {
+        background: var(--primary-color) !important;
+      }
+
+      .impact-card:hover .impact-icon i {
+        color: white !important;
+        transform: rotateY(180deg) !important;
+      }
+
+      /* Donation Form Section */
+      .contact-form-wrap {
+        padding: 40px 0 !important;
+      }
+
+      .contact__form {
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 30px 20px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        animation: fadeIn 1s ease-out !important;
+      }
+
+      .form-group {
+        margin-bottom: 20px !important;
+      }
+
+      .form-control {
+        height: 50px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(34, 58, 102, 0.1) !important;
+        padding: 10px 20px !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease !important;
+      }
+
+      .form-control:focus {
+        box-shadow: 0 5px 15px rgba(34, 58, 102, 0.1) !important;
+        border-color: var(--primary-color) !important;
+      }
+
+      textarea.form-control {
+        height: auto !important;
+      }
+
+      /* Payment Info Section */
+      .payment-info {
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 30px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        margin-top: 30px !important;
+        animation: slideUp 0.5s ease-out !important;
+      }
+
+      .payment-info h4 {
+        color: var(--primary-color) !important;
+        margin-bottom: 20px !important;
+        font-size: 1.3rem !important;
+      }
+
+      .payment-info ul {
+        list-style: none !important;
+        padding: 0 !important;
+      }
+
+      .payment-info ul li {
+        padding: 10px 0 !important;
+        border-bottom: 1px solid rgba(34, 58, 102, 0.1) !important;
+        color: #6F8BA4 !important;
+      }
+
+      /* Popup Enhancement */
+      .popup {
+        backdrop-filter: blur(8px) !important;
+      }
+
+      .popup-content {
+        border-radius: 20px !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+        animation: popupSlideUp 0.3s ease-out !important;
+      }
+
+      .donation-methods {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+        border-radius: 15px !important;
+      }
+
+      /* Animations */
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes popupSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Button Enhancement */
+      .btn {
+        padding: 12px 25px !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        transition: all 0.3s ease !important;
+        width: 100% !important;
+      }
+
+      .popup-button {
+        background: linear-gradient(135deg, #007bff, #0056b3) !important;
+        border: none !important;
+        color: white !important;
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2) !important;
+      }
+
+      .popup-button:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3) !important;
+      }
+
+      /* Section Title Enhancement */
+      .section-title {
+        margin-bottom: 40px !important;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 15px !important;
+        position: relative !important;
+        padding-bottom: 15px !important;
+      }
+
+      .section-title h2::after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 60px !important;
+        height: 3px !important;
+        background: var(--primary-color) !important;
+      }
+
+      /* Footer Enhancement */
+      .footer {
+        padding: 40px 0 20px !important;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+        position: relative !important;
+      }
+
+      .footer::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 1px !important;
+        background: linear-gradient(to right, transparent, rgba(225, 36, 84, 0.2), transparent) !important;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 576px) {
+      .navbar-brand span {
+        display: none !important;
+      }
+
+      .donation-hero h1 {
+        font-size: 1.8rem !important;
+      }
+
+      .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      .impact-card {
+        margin-bottom: 15px !important;
+      }
+    }
+    </style>
 </head>
 
 <body id="top">
@@ -23,6 +341,7 @@
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="images/LOGO.png" alt="Sickle Cell Awareness Logo" class="img-fluid">
+        <span style="margin-left: 30px; font-size: 1.2rem; font-weight: bold; color: #f8f7f7;">Sicklecell Awareness and Support network</span>
       </a>
 
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,16 +351,19 @@
       <div class="collapse navbar-collapse" id="navbarmain">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link btn btn-primary mx-1" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary mx-1" href="about.html">Who We Are</a>
+            <a class="nav-link" href="about.html">Who We Are</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary mx-1" href="services.html">What We Do</a>
+            <a class="nav-link" href="sickle-cell-info.html">About SickleCell Disease</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary mx-1" href="donate.html">Donate</a>
+            <a class="nav-link" href="services.html">What We Do</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="donate.html">Support Us</a>
           </li>
         </ul>
       </div>
