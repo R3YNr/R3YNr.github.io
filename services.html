@@ -14,12 +14,14 @@
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
   <link rel="stylesheet" href="css/style.css"> <!-- Reference your main style sheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <header> 
   <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="images/LOGO.png" alt="Sickle Cell Awareness Logo" class="img-fluid">
+        <span style="margin-left: 30px; font-size: 1.2rem; font-weight: bold; color: #f8f7f7;">Sickle Cell Awareness And Support Network</span>
       </a>
 
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +35,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">Who We Are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sickle-cell-info.html">About SickleCell Disease</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="services.html">What We Do</a>
@@ -53,8 +58,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block text-center">
-          <span class="text-white">What We Do</span>
-          <h1 class="text-capitalize mb-4 text-lg">Our Services</h1>
+            
+          <h1 class="text-capitalize mb-4 text-lg">What We Do</h1>
           <div class="divider mx-auto mb-4"></div>
           <p class="hero-text">Dedicated to reducing the burden of Sickle Disease through awareness, understanding, and comprehensive support</p>
         </div>
@@ -65,17 +70,37 @@
 
 <section class="services-section">
   <div class="container">
+    <!-- Added Title Section -->
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <div class="section-title text-center">
+          <h2>Our Core Services</h2>
+          <div class="divider mx-auto my-4"></div>
+          <p class="section-subtitle">Comprehensive support and initiatives to combat Sickle Cell Disease</p>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-lg-3 col-md-6">
         <div class="service-card">
           <div class="service-icon education">
             <i class="icofont-education"></i>
           </div>
-          <h3>Raise Awareness and Education</h3>
+          <h3 class="text-center mb-4">Raise Awareness and Education</h3>
           <ul class="service-list">
-            <li><i class="icofont-check-circled"></i>Conduct community awareness campaigns</li>
-            <li><i class="icofont-check-circled"></i>Distribute educational materials</li>
-            <li><i class="icofont-check-circled"></i>Collaborate with local actors</li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Conduct community awareness campaigns</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Distribute educational materials</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Collaborate with local actors</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -85,12 +110,24 @@
           <div class="service-icon support">
             <i class="icofont-support"></i>
           </div>
-          <h3>Provide Support Services</h3>
+          <h3 class="text-center mb-4">Provide Support Services</h3>
           <ul class="service-list">
-            <li><i class="icofont-check-circled"></i>Establish support groups</li>
-            <li><i class="icofont-check-circled"></i>Offer psychosocial support</li>
-            <li><i class="icofont-check-circled"></i>Facilitate medical access</li>
-            <li><i class="icofont-check-circled"></i>Provide livelihood support</li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Establish support groups</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Offer psychosocial support</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Facilitate medical access</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Provide livelihood support</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -100,10 +137,16 @@
           <div class="service-icon advocacy">
             <i class="icofont-handshake-deal"></i>
           </div>
-          <h3>Advocacy and Policy Influence</h3>
+          <h3 class="text-center mb-4">Advocacy and Policy Influence</h3>
           <ul class="service-list">
-            <li><i class="icofont-check-circled"></i>Promote quality healthcare policies</li>
-            <li><i class="icofont-check-circled"></i>Work with local stakeholders</li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Promote quality healthcare policies</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Work with local stakeholders</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -113,17 +156,176 @@
           <div class="service-icon research">
             <i class="icofont-brainstorming"></i>
           </div>
-          <h3>Research and Innovation</h3>
+          <h3 class="text-center mb-4">Research and Innovation</h3>
           <ul class="service-list">
-            <li><i class="icofont-check-circled"></i>Foster research initiatives</li>
-            <li><i class="icofont-check-circled"></i>Encourage innovative approaches</li>
-            <li><i class="icofont-check-circled"></i>Partner with academic institutions</li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Foster research initiatives</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Encourage innovative approaches</span>
+            </li>
+            <li>
+              <i class="icofont-check-circled"></i>
+              <span>Partner with academic institutions</span>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+.services-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+/* Added Title Styles */
+.section-title h2 {
+  color: #223a66;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-subtitle {
+  color: #6F8BA4;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: #e12454;
+  margin: 20px auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, rgba(225, 36, 84, 0.1), rgba(34, 58, 102, 0.1));
+  transition: all 0.3s ease;
+}
+
+.service-icon i {
+  font-size: 32px;
+  color: #e12454;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: #e12454;
+}
+
+.service-card:hover .service-icon i {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.service-card h3 {
+  color: #223a66;
+  font-size: 24px; /* Increased from 20px */
+  margin-bottom: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Increased from 15px */
+  color: #6F8BA4;
+  font-size: 17px; /* Increased from 15px */
+  line-height: 1.6;
+}
+
+.service-list li:last-child {
+  margin-bottom: 0;
+}
+
+.service-list li i {
+  color: #e12454;
+  margin-right: 12px;
+  margin-top: 5px;
+  font-size: 18px; /* Increased from 16px */
+  flex-shrink: 0;
+}
+
+.service-list li span {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .services-section {
+    padding: 50px 0;
+  }
+
+  .service-card {
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .service-icon i {
+    font-size: 28px;
+  }
+
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .service-list li {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+</style>
 
 <!-- footer Start -->
 <footer class="footer section gray-bg">
@@ -135,11 +337,7 @@
           <img src="images/Sickle_1.JPG" alt="SCASN Logo" class="img-fluid">
         </div>
         <p class="mt-3">Times of pain and pleasure truly must be endured; it is easy for those who are blinded to be held to the truth, and distinction becomes possible.</p>
-        <ul class="list-inline footer-socials mt-4">
-          <li class="list-inline-item"><a href="#"><i class="icofont-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="icofont-twitter"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="icofont-linkedin"></i></a></li>
-        </ul>
+        <p class="about-text">Dedicated to reducing the burden of Sickle Cell Disease through awareness, understanding, and comprehensive support. Together, we're building a future of hope.</p>
       </div>
 
       <!-- Quick Links Column -->
@@ -158,12 +356,12 @@
         <div class="footer-contact-info">
           <div class="contact-item">
             <i class="icofont-support"></i>
-            <h5>Support Available for 24/7</h5>
+            <h5>Get in touch</h5>
             <p>Email: director.scsaan@gmail.com</p>
           </div>
           <div class="contact-item">
             <i class="icofont-clock-time"></i>
-            <h5>Mon to Fri : 08:30 - 18:00</h5>
+            <h5>Contact us On</h5>
             <p>tel:+256-7820-83178/ 0777693879</p>
           </div>
           <div class="contact-item">
@@ -172,6 +370,16 @@
             <p>Elephante Commons in Gulu city</p>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <ul class="footer-socials list-inline">
+          <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61573878898278&mibextid=ZbWKwL"><i class="icofont-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="http://tiktok.com/@scasn1"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
       </div>
     </div>
 

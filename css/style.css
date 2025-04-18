@@ -14,9 +14,10 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 25px;
-  color: blue;
+  color: #333; /* Changed from blue for better contrast */
   font-weight: 400;
   padding-top: 120px;
+  background-color: #e0e0e0; /* Made background darker */
 }
 
 h1, .h1, h2, .h2, h3, .h3, h5, .h5, h6, .h6 {
@@ -659,7 +660,7 @@ a:focus {
 .banner {
   position: relative;
   overflow: hidden;
-  background: url("../images/team/home1.jpg") no-repeat center center;
+  background: url("../images/IMG-20250224-WA0045.jpg") no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -689,7 +690,7 @@ a:focus {
 }
 
 .banner .home {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -726,20 +727,36 @@ a:focus {
 }
 
 .banner .btn-primary {
-  background: #e12454;
+  background-color: #e12454;
   border-color: #e12454;
   color: #fff;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
 }
 
 .banner .btn-outline-light {
   color: #fff;
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
 }
 
 .banner .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner .btn-primary:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #e12454;
+}
+
+.banner .btn-outline-light:hover {
+  background-color: #fff;
+  color: #e12454;
 }
 
 .counter-stat {
@@ -809,7 +826,7 @@ a:focus {
 }
 
 .section.bg-light {
-  background-color: #f8f9fa;
+  background-color: grey;
 }
 
 @media (max-width: 768px) {
@@ -1014,20 +1031,21 @@ a:focus {
 }
 
 .cta {
-  background: url("../images/bg/bg-4.jpg") no-repeat 50% 50%;
-  background-size: cover;
+  /* background: url("../images/bg/bg-4.jpg") no-repeat 50% 50%; */ /* Removed background image */
+  /* background-size: cover; */ /* Removed background size */
+  background-color: #e0e0e0; /* Explicitly set desired background */
   position: relative;
 }
 
-.cta:before {
-  position: absolute;
-  content: "";
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: rgba(34, 58, 102, 0.95);
-}
+/* .cta:before { */ /* Removed overlay */
+/*  position: absolute; */
+/*  content: ""; */
+/*  left: 0px; */
+/*  top: 0px; */
+/*  width: 100%; */
+/*  height: 100%; */
+/*  background: rgba(34, 58, 102, 0.95); */
+/* } */
 
 .mb-30 {
   margin-bottom: 10px;
@@ -1427,7 +1445,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Or any color that fits your design */
+  background-color: #dc3545; /* Or any color that fits your design */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visibility */
 }
 
@@ -1468,13 +1486,26 @@ body {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 90vw; /* Changed to use viewport width */
+  max-width: 105%;
+  width: 103%;
   position: relative;
-  margin: auto;
-  margin-bottom: 50px;
-  height: 500px;
+  margin: 0;
+  padding: 0 2%; /* Reduced side padding */
+  height: 110vh;
   overflow: hidden;
-  background: #f8f9fa;
+  background-color: #e0e0e0; /* Changed background to match body */
+}
+
+.section-title {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0;
+}
+
+.section-title h2 {
+  margin: 0;
+  padding: 20px 0;
+  color: #223a66;
 }
 
 /* Hide the images by default */
@@ -1488,9 +1519,12 @@ body {
   visibility: hidden;
   transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
   z-index: 1;
-  display: flex; /* Use flexbox for better image centering */
+  display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 8%; /* Increased padding to push content wider */
+  justify-content: center; /* Center the content horizontally */
+  gap: 4%; /* Add gap between image and content */
+  background-color: #e0e0e0; /* Changed background to match body */
 }
 
 .mySlides.active {
@@ -1501,117 +1535,132 @@ body {
 
 /* Images */
 .mySlides img {
-  width: 100%;
-  height: 100%;
+  width: 58%; /* Slightly increased image width */
+  height: 90%;
   object-fit: cover;
-  border-radius: 10px;
-  display: block; /* Ensure image is block-level */
+  border-radius: 15px;
+  display: block;
 }
 
-/* Caption text */
-.text {
-  color: #ffffff;
-  font-size: 15px;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  z-index: 3; /* Ensure caption is always on top */
+/* Content layout */
+.slide-content {
+  width: 38%; /* Slightly increased content width */
+  height: 90%;
+  padding: 40px 30px; /* Increased horizontal padding */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  margin-left: 0; /* Remove margin since we're using gap */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Container for slideshow and navigation */
-.slideshow-outer-container {
-  position: relative;
-  max-width: 95vw;
-  margin: 0 auto;
-  padding: 0 140px; /* Increased padding to accommodate the buttons */
+.slide-content h3 {
+  color: #223a66;
+  font-size: 2.5rem; /* Reduced font size */
+  font-weight: 700;
+  margin-bottom: 1.5rem; /* Adjusted margin */
 }
 
-/* Position the buttons outside but further */
+.service-list li {
+  font-size: 1.2rem; /* Reduced font size */
+  color: #6F8BA4;
+  margin-bottom: 15px; /* Adjusted margin */
+  display: flex;
+  align-items: center;
+  line-height: 1.6; /* Added line-height */
+}
+
+.service-list li i {
+  color: #e12454;
+  margin-right: 15px; /* Adjusted margin */
+  font-size: 1.4rem; /* Adjusted icon size */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Navigation buttons - adjust position */
 .prev {
-  left: -120px; /* Move further from the image */
+  left: 30px; /* Move slightly more to the sides */
 }
 
 .next {
-  right: -120px; /* Move further from the image */
+  right: 30px; /* Move slightly more to the sides */
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-  user-select: none;
-  background-color: rgba(225, 36, 84, 0.9);
-  text-decoration: none;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transform-origin: center center;
-  transform: translate(0, -50%);
-}
-
-/* Button hover effects */
 .prev:hover, .next:hover {
-  background-color: rgba(225, 36, 84, 1);
-  transform: translate(0, -50%) scale(1.1);
-  color: white;
-  text-decoration: none;
+  background-color: #e12454;
+  transform: translateY(-50%) scale(1.1);
 }
 
-/* Mobile responsiveness */
-@media only screen and (max-width: 1800px) {
-  .slideshow-outer-container {
-    max-width: 95vw;
-    padding: 0 60px;
+/* Responsive adjustments */
+@media only screen and (max-width: 991px) {
+  .slideshow-container {
+    height: 85vh; /* Adjust height for tablets */
+    min-height: initial; /* Remove min-height override */
   }
-  
-  .prev {
-    left: 20px;
-    transform: translate(0, -50%);
+
+  .mySlides {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
   }
-  
-  .next {
-    right: 20px;
-    transform: translate(0, -50%);
+
+  .mySlides img {
+    width: 100%;
+    height: 60vh; /* Increased height for tablets */
+    margin-bottom: 15px;
   }
-  
-  .prev:hover, .next:hover {
-    transform: translate(0, -50%) scale(1.1);
+
+  .slide-content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+    padding: 25px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .slideshow-container {
-    height: 300px;
-    max-width: 100vw;
+    height: 80vh; /* Adjust height for smaller tablets */
+    min-height: initial; /* Remove min-height override */
   }
-  
-  .slideshow-outer-container {
-    max-width: 100vw;
-    padding: 0 40px;
+
+  .mySlides img {
+    height: 50vh; /* Adjusted height for smaller tablets */
   }
-  
+
+  .slide-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .service-list li {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .slideshow-container {
+    height: 75vh; /* Adjust height for mobile */
+    min-height: initial; /* Remove min-height override */
+  }
+
+  .mySlides {
+    padding: 10px;
+  }
+
+  .mySlides img {
+    height: 45vh; /* Adjusted height for mobile */
+  }
+
+  .slide-content {
+    padding: 15px;
+  }
+
   .prev, .next {
     width: 40px;
     height: 40px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -1634,7 +1683,7 @@ body {
 
 /* Container styles */
 .container {
-  max-width: 95vw; /* Make containers match slideshow width */
+  max-width: 100vw; /* Make containers match slideshow width */
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -1705,7 +1754,7 @@ body {
 
 /* Impact Section Styles */
 .impact-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */ /* Removed to inherit body background */
   padding: 100px 0;
 }
 
@@ -1851,8 +1900,10 @@ body {
 }
 
 /* Section Enhancements */
+/*Our impact in photos and our mission section and the footer*/
 .section {
   padding: 100px 0;
+  
 }
 
 .section-title {
@@ -1880,7 +1931,7 @@ body {
 
 /* Impact Section Enhancement */
 .impact-section {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); */ /* Removed to inherit body background */
   padding: 100px 0;
 }
 
@@ -2018,119 +2069,103 @@ body {
 
 /* Header Navigation Styles */
 .navigation {
+  background: #dc3545;
   padding: 15px 0;
-  transition: .3s ease;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all .3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand {
-  padding: 0;
-}
-
-.navbar-brand img {
-  max-height: 60px;
-  width: auto;
-}
-
-.navbar-nav .nav-item {
-  position: relative;
-  margin: 0 10px;
-}
-
-.navbar-nav .nav-link {
-  padding: 10px 15px !important;
-  font-size: 16px;
+#navbarmain .nav-link {
+  padding: 12px 20px;
   font-weight: 500;
-  color: #223a66;
+  color: #fff;
+  font-family: "Exo", sans-serif;
   text-transform: capitalize;
-  transition: .3s ease;
-  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-radius: 4px;
+  margin: 0 5px;
+  border: 1px solid transparent;
+  position: relative;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-item.active .nav-link {
+#navbarmain .nav-link:hover,
+#navbarmain .nav-item.active .nav-link {
   color: #fff;
-  background: #e12454;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.navbar-nav .nav-item:last-child .nav-link {
-  background: #e12454;
-  color: #fff;
-  padding: 12px 25px !important;
+#navbarmain .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
-.navbar-nav .nav-item:last-child .nav-link:hover {
-  background: #223a66;
+#navbarmain .nav-link:hover::after {
+  width: 80%;
+}
+
+#navbarmain .navbar-nav {
+  align-items: center;
+  gap: 5px;
 }
 
 .navbar-toggler {
-  padding: 0;
-  border: 0;
-  position: relative;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: transparent;
 }
 
 .navbar-toggler:focus {
   outline: none;
+  box-shadow: none;
 }
 
-.navbar-toggler i {
+.navbar-toggler .icofont-navigation-menu {
+  color: #fff;
   font-size: 24px;
-  color: #223a66;
 }
 
 @media (max-width: 991px) {
-  .navigation {
-    padding: 10px 0;
+  .navbar-collapse {
+    background: #dc3545;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  .navbar-brand img {
-    max-height: 50px;
-  }
-  
-  .navbar-nav {
-    padding: 15px 0;
-  }
-  
-  .navbar-nav .nav-item {
+
+  #navbarmain .nav-item {
     margin: 5px 0;
   }
-  
-  .navbar-nav .nav-link {
-    border-radius: 5px;
-  }
-  
-  .navbar-collapse {
-    background: #fff;
-    padding: 0 15px;
-    border-radius: 5px;
-    margin-top: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  #navbarmain .nav-link {
+    text-align: left;
+    padding: 12px 15px;
   }
 }
 
 /* Sticky Header */
 .navbar.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  z-index: 999;
+  background: #dc3545;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add animation for smooth scroll */
-.navbar.sticky {
-  animation: slideDown 0.5s ease-in-out;
+.navbar.sticky .nav-link {
+  color: #fff;
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+.navbar.sticky .nav-link:hover {
+  color: #fff;
 }
 
 /* About Page Enhancements */
@@ -2999,8 +3034,9 @@ body {
 
 .service-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 18px;
+  margin: 29px;
+  padding-left: 136px;
 }
 
 .service-list li {
@@ -3221,7 +3257,7 @@ body {
 
 /* Donation Form Styles */
 .contact-form-wrap {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important; */ /* Removed to inherit body background */
   padding: 80px 0 !important;
 }
 
@@ -3632,4 +3668,232 @@ body {
     body {
         padding-top: 90px;
     }
+}
+
+.slide-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.slide-content .lead {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.slide-content .service-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.slide-content .service-list li {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+.slide-content .service-list i {
+    color: #e12454;
+    font-size: 1.1rem;
+}
+
+/* Add after existing styles */
+
+.symptom-card, .tip-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.symptom-card:hover, .tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content-block {
+    margin-bottom: 50px;
+}
+
+.content-block h2 {
+    color: #223a66;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-block h3 {
+    color: #223a66;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.management-tips .tip-card {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.management-tips .tip-card h4 {
+    color: #223a66;
+}
+
+.management-tips .tip-card ul li {
+    font-size: 1.1rem;
+    color: #6F8BA4;
+    margin-bottom: 10px;
+}
+
+/* Target the specific section containing the slideshow */
+.slideshow-parent-section {
+  padding: 0 !important; /* Remove top/bottom padding */
+  margin: 0 !important; /* Remove margins */
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 90vh; /* Increased height to 90% of viewport */
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+/* Images and content layout */
+.mySlides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 4%; /* Adjust padding */
+  background: #f8f9fa;
+}
+
+.mySlides img {
+  width: 55%; /* Adjusted image width to 55% */
+  height: 90%; /* Adjust image height */
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Content layout */
+.slide-content {
+  width: 45%; /* Adjusted content width to 45% */
+  height: 90%; /* Match image height */
+  padding: 40px 25px; /* Adjusted padding */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  margin-left: 25px; /* Slightly reduced margin */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
+  justify-content: center; /* Added to vertically center content */
+}
+
+.slide-content h3 {
+  color: #223a66;
+  font-size: 2.5rem; /* Reduced font size */
+  font-weight: 700;
+  margin-bottom: 1.5rem; /* Adjusted margin */
+}
+
+.service-list li {
+  font-size: 1.2rem; /* Reduced font size */
+  color: #6F8BA4;
+  margin-bottom: 15px; /* Adjusted margin */
+  display: flex;
+  align-items: center;
+  line-height: 1.6; /* Added line-height */
+}
+
+.service-list li i {
+  color: #e12454;
+  margin-right: 15px; /* Adjusted margin */
+  font-size: 1.4rem; /* Adjusted icon size */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+@media only screen and (max-width: 991px) {
+  .slideshow-container {
+    height: 85vh;
+    min-height: initial;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: 55vh; /* Adjust */
+    margin-bottom: 15px;
+  }
+
+  .slide-content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+    padding: 30px;
+  }
+
+  .slide-content h3 {
+    font-size: 2.5rem; /* Adjust */
+  }
+
+  .service-list li {
+    font-size: 1.2rem; /* Adjust */
+  }
+  .service-list li i {
+    font-size: 1.4rem; /* Adjust */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slideshow-container {
+    height: 80vh;
+    min-height: initial;
+  }
+
+  .mySlides img {
+    height: 45vh; /* Adjust */
+  }
+
+  .slide-content h3 {
+    font-size: 2rem; /* Adjust */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .slideshow-container {
+    height: 75vh;
+    min-height: initial;
+  }
+
+  .mySlides img {
+    height: 40vh; /* Adjust */
+  }
+
+  .slide-content h3 {
+    font-size: 1.8rem; /* Adjust */
+  }
+
+  .service-list li {
+    font-size: 1rem; /* Adjust */
+  }
+  .service-list li i {
+    font-size: 1.2rem; /* Adjust */
+  }
 }

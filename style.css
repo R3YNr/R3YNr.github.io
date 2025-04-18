@@ -1,0 +1,5 @@
+/* Add this rule to style the background */
+.grey-background {
+    background-color: grey;
+    padding: 20px 0; /* Optional: Adjust padding as needed */
+}
